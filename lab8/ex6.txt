@@ -1,0 +1,3 @@
+2^16 addresses can be mapped with 16 bit number
+2^13 offset for 8Kb page
+2^16 / 2^13 = 8 entries
