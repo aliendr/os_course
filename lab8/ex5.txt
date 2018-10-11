@@ -1,0 +1,2 @@
+Physical address=real address in RAM, if you go by it you will get what is stored in a chip.
+Virtual memory has a function that maps vitrual address to the physical, it has not same limits as real memory.
