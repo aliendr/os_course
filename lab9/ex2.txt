@@ -1,1 +1,3 @@
+1)The sequence of sorted values will result in increasing hit/miss ratio, because we will be searching for the same page many times. Number of distinct pages should be less or equal than number of page frames, after that they just repeating. Then, miss will happen only while there are free frames. 
 
+2)If we will load-unload pages as much as possible (the best option here will be sequence with no repetitions at all) - hit / miss ratio is 0.
