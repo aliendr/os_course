@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/alien/CLionProjects/lab11/ex1.c
+stdio.h
+C:/Users/alien/CLionProjects/lab11/stdio.h
+stdlib.h
+-
+unistd.h
+-
+fcntl.h
+-
+sys/mman.h
+-
+sys/stat.h
+-
+memory.h
+-
+
+C:/Users/alien/CLionProjects/lab11/ex4.c
+string.h
+-
+stdio.h
+-
+stdlib.h
+-
+sys/stat.h
+-
+sys/mman.h
+-
+unistd.h
+-
+fcntl.h
+-
+
