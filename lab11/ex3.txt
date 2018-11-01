@@ -1,0 +1,1 @@
+In the first case, there was output 2 hellows (parent and child). In the second - only one hello. That happened because when newline caracter met, buffer had cleaned and only then fork() met.
