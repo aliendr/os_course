@@ -1,0 +1,11 @@
+Asynchronius executing processes are faster. The reason is that there is no waiting until write() will unblock execution, but with sync it does until all data is on disk.
+
+WITH O_SYNC:
+real	0m0.016s
+user	0m0.004s
+sys	  0m0.000s
+
+WITHOUT O_SYNC:
+real	0m0.004s
+user	0m0.004s
+sys	  0m0.000s
