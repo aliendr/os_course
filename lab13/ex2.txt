@@ -1,0 +1,47 @@
+1. Deadlock preventionDeadlock avoidance algorithms ensure that at least one of the necessary conditions 
+  (Mutual exclusion, hold and wait, no preemption and circular wait) does not hold true. 
+  However most prevention algorithms have poor resource utilization, and hence result in reduced throughputs.
+
+  Mutual Exclusion : Not always possible to prevent deadlock by preventing mutual exclusion (making all resources shareable) 
+                      as certain resources are cannot be shared safely.
+
+  Hold and Wait: 2 approaches, but both have their disadvantages. 
+                 A resource can get all required resources before it start execution. 
+                 This will avoid deadlock, but will result in reduced throughputs as resources are held by processes even when they are not needed. 
+                 They could have been used by other processes during this time.
+                 
+                 Second approach is to request for a resource only when it is not holing any other resource. 
+                 This may result in a starvation as all required resources might not be available freely always.
+                
+  No preemption: 2 approaches again. 
+                 If a process request for a resource which is held by another waiting resource, 
+                 then the resource may be preempted from the other waiting resource. In the second approach, 
+                 if a process request for a resource which are not readily available, all other resources that it holds are preempted.  
+
+                 The challenge here is that the resources can be preempted only if we can save the current state can be saved and
+                 processes could be restarted later from the saved state.
+                 
+   Circular wait: To avoid circular wait, resources may be ordered and we can ensure that each process can request resources only in an increasing order of these numbers. 
+                  The algorithm may itself increase complexity and may also lead to poor resource utilization.              
+  
+  
+2. Deadlock avoidance
+                      Deadlocks can be avoided, but only if certain information is available in advance. Such as:
+                       -The system must be able to decide whether granting a resource is safe or not and make the allocation only when it is safe.
+                       (HALTING PROBLEM)
+                       
+3. Deadlock Recovery - Let deadlocks occur, detect them, and take action
+                     Once a deadlock is detected, you will have to break the deadlock. 
+                     It can be done through different ways, including, aborting one or more processes to break the circular wait condition causing the deadlock and preempting resources from one or more processes which are deadlocked.                       
+                     
+                     Possible methods of recovery
+                      – Preemption (taking a resource away from a processes and use it and then return it back.)
+                      – Rollback (OS makes checkpoints(save in file current state) and then 
+                                  in case of deadlock return back to earlier state when there's no deadlock.)
+                      – Killing processes (Killing process one by one. After killing each process check for deadlock again keep repeating 
+                                  process till system recover from deadlock.)
+                      
+                      Traditional operating system such as Windows doesn’t deal with deadlock recovery as it is time and space consuming process. Real time operating systems use Deadlock recovery.
+        
+                      
+                      
